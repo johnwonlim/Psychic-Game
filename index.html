@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Psychic Game</title>
+</head>
+
+<body>
+    <h1>Psychic Game</h1>
+
+    <p> Guess what letter I'm thinking of</p>
+    <br />
+    <p> Wins:
+        <b id=NumWin></b>
+    </p>
+    <br />
+    <p> Loses:
+        <b id=NumLoss></b>
+    </p>
+    <br />
+    <p> Guesses Left:
+        <b id=GuessLeft></b>
+    </p>
+    <br />
+    <p> Your Guesses so far:
+        <b id=InputKey></b>
+
+    </p>
+        <script src="game.js"></script>
+        <script type="text/javascript">
+            var numWin = 0;
+            var numLoss = 0;
+            var listInputKey = [];
+            var numGuess = 9;
+            var randChar = generateRandChar();
+            document.getElementById("InputKey").innerHTML = listInputKey;
+            document.getElementById("GuessLeft").innerHTML = numGuess;
+            document.getElementById("NumWin").innerHTML = numWin;
+            document.getElementById("NumLoss").innerHTML = numLoss;
+            startGame(numWin, numLoss, listInputKey, numGuess, randChar);
+        </script>
+    <br />
+</body>
+</html>
